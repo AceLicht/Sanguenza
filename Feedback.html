@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank you for using our website!</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="SANGUENZA_LOGO.png" type="image/x-icon">
+  <style>
+    body {
+      background-image: url('gaming.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+    main {
+      text-align: center;
+    }
+    .radio-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .containers {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      font-size: 18px;
+    }
+    .containers input {
+      opacity: 0;
+      position: absolute;
+    }
+    .checkmark {
+      height: 25px;
+      width: 25px;
+      background-color: #eee;
+      border-radius: 50%;
+      margin-right: 10px;
+      transition: background-color 0.3s;
+    }
+    .containers:hover .checkmark, .containers input:focus + .checkmark {
+      background-color: #ccc;
+    }
+    .containers input:checked + .checkmark {
+      background-color: #2196F3;
+    }
+    .checkmark:after {
+      content: "";
+      position: absolute;
+      top: 9px;
+      left: 9px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white;
+      transform: translate(-50%, -50%);
+      display: none;
+    }
+    .containers input:checked + .checkmark:after {
+      display: block;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <header>
+        <div class="logo">
+            <a href="index.html"> <!-- home page -->
+                <img src="SANGUENZA_LOGO.png">
+            </a>
+        </div>
+        <div class="navBar">
+            <nav>
+                <ul>
+                    <a href="Home.html"> Home </a>
+                    <a href="About.html"> About </a>
+                    <a href="Products.html" class="dropdown-toggle"> Products
+                        <div class="dropdown">
+                            <img src="laptop1.png" alt="ROG ZEPHYRUS M16">
+                            <img src="laptop2.png" alt="ROG STRIX G16">
+                            <img src="laptop3.png" alt="ROG STRIX G18">
+                            <img src="laptop4.png" alt="ROG STRIX SCAR 18">
+                        </div>
+                    </a>
+                    <a href="Contactus.html"> Contact </a>
+                </ul>
+            </nav>
+        </div>
+    </header>
+  <main>
+    <section class="fsh">
+      <h1>How was our service?</h1>
+        <fieldset class="radio-buttons">
+          <legend>Your satisfaction level:</legend>
+          <label class="containers">Very Unsatisfied
+            <input type="radio" name="satisfaction" value="very_unsatisfied">
+            <span class="checkmark"></span>
+          </label>
+          <label class="containers">Unsatisfied
+            <input type="radio" name="satisfaction" value="unsatisfied">
+            <span class="checkmark"></span>
+          </label>
+          <label class="containers">Neutral
+            <input type="radio" name="satisfaction" value="neutral" checked>
+            <span class="checkmark"></span>
+          </label>
+          <label class="containers">Satisfied
+            <input type="radio" name="satisfaction" value="satisfied">
+            <span class="checkmark"></span>
+          </label>
+          <label class="containers">Very Satisfied
+            <input type="radio" name="satisfaction" value="very_satisfied">
+            <span class="checkmark"></span>
+          </label>
+        </fieldset>
+        <!-- Styled submit button to look like a link -->
+        <div class="submit-button">
+          <a href="Thankyou.html"><input type="submit" value="Submit" class="button"></a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
